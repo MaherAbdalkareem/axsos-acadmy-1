@@ -1,0 +1,41 @@
+#contianer{
+    width: 600px;
+    height: 350px;
+    border: 3px solid gray;
+    position: fixed;
+    top: 10%;
+    left: 30%;
+}
+.header{
+    background-color: rgb(0, 92, 128);
+    height: 100px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.profile{
+    width: 50px;
+    margin: 0px 0px -20px 40px;
+    border: 2px solid silver;
+    border-radius: 50px;
+}
+h2{
+    margin-top: 30px;
+}
+.map{
+    font-size: 20px;
+}
+.map1{
+    width: 20px;
+    height: 30px;
+}
+.content{
+    margin-left: 30px;
+    font-family: cursive;
+}
+.link{
+    display: flex;
+}
+.gear{
+    height: 25px;
+    margin-right: 10px;
+}

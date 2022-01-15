@@ -1,0 +1,43 @@
+.row{ 
+    color: white;
+    display: flex;
+    flex: 4;
+    border-right: 2px solid black;
+    margin-bottom: 15px;
+    
+}
+
+.col{
+    flex: 1;
+    height: 80px;
+    background-color: blue;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    font-size: 20;
+    font-weight: bold;
+}
+.col-2{
+    flex: 2;
+    height: 80px;
+    background-color: blue;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    font-size: 20;
+    font-weight: bold;
+}
+
+.col-3{
+    flex: 3;
+    height: 80px;
+    background-color: blue;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    font-size: 20;
+    font-weight: bold;
+}

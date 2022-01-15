@@ -1,0 +1,26 @@
+*{
+    margin: 20px 50px 20px 50px;
+}
+.but1{ display: block;
+    color: aqua;
+    background-color: white;
+    border: 3px solid aqua;
+    border-radius: 10px;
+    width: 200px;
+    
+}
+.but2{display: block;
+    color: white;
+    border-radius: 50%;
+    background-color: turquoise;
+    border:0px ;
+    width:20px
+
+}
+.but3{display: block;
+    color: white;
+    background-color: blue;
+    border:3px solid black ;
+    width: 200px;
+    box-shadow: 2px 2px 2px black;
+}
