@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 50px;
+    width: 700px;
+    display: flex;
+    justify-content: space-around;
+    background-color: silver;
+    align-items: center;
+    margin: 0 auto;
+}
+header button{
+    border: 2px solid black;
+    color: white;
+    background-color: rgb(5, 68, 119);
+    width: 50px;
+    box-shadow: black 2px 2px;
+}
+header input{
+    border: black 2px solid;
+    height: 20px;
+}
+section .box1{
+    border: black 2px solid;
+    width: 370px;
+    height: 160px;
+    display: flex;
+    justify-content: space-between;
+}
+section .box1 .ninja h2{
+    font-family:sans-serif;
+    margin-bottom: 10px;
+}
+section .box1 .ninja .noun{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+section .box1 .ninja{
+    width: 250px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+section button{
+    margin-top: 30px;
+    background-color: rgb(182, 199, 32);
+    border: 2px solid black;
+    box-shadow: black 2px 2px;
+    width: 70px;
+    height: 20px;
+}
+section .box1 .ninja span{
+    font-family: sans-serif;
+    font-style: italic;
+}
+section .box1 .paragraph{
+    margin: auto 15px;
+}
+section .box2{
+    border: black 2px solid;
+    width: 370px;
+    height: 160px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+section .box2 .ninja h3{
+    font-family:sans-serif;
+    margin-bottom: 10px;
+}
+section .box2 .ninja .noun{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+section .box2 .ninja{
+    width: 250px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+section .box2 .ninja span{
+    font-family: sans-serif;
+    font-style: italic;
+}
+section .box2 .paragraph{
+    margin: auto 15px;
+}
+article{
+    width: 220px;
+    height: 120px;
+    border: black 2px solid;
+}
+article p{
+    font-size: 30px;
+}
+article p span{
+    font-weight: bold;
+}
+article button{
+    margin-top: 15px;
+    background-color: rgb(48, 136, 48);
+    border: black solid 2px;
+    box-shadow: black 2px 2px;
+    margin-left: 10px;
+    width: 200px;
+    height: 30px;
+}
+.cont{
+    width: 700px;
+    display: flex;
+    margin: 10px auto;
+    justify-content: space-between;
+}
