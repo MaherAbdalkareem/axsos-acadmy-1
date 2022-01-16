@@ -1,0 +1,19 @@
+body{
+    width: 400px;
+    height: 140px;
+    border: 2px solid black;
+    margin: 0 auto;
+    font-family:cursive;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+nav button{
+    background-color: rgb(117, 168, 35);
+    width: 50px;
+    height: 20px;
+    border: 2px solid black;
+    box-shadow: black 2px 2px;
+}
