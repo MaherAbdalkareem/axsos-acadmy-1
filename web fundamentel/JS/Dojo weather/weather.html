@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <header> 
+        <nav>
+        <h1>Dojo Weather</h1>
+        <ul>
+            <li onclick="alert('loading weather report...')">Burbank</li>
+            <li onclick="alert('loading weather report...')">Chicago</li>
+            <li onclick="alert('loading weather report...')">Dallas</li>
+        </ul>
+    </nav>
+    </header>
+    <section>
+        <div class="temp">
+        <h2>San Jose</h2>
+            <p>show temperature in <select id="myselect" onchange="convert(this)">
+                <option >C°</option>
+                <option >F°</option>
+            </select> </p>
+        </div>
+        <div class="pic">
+            <div class="today">
+                <p class="parag">Today</p>
+                <img src="some_rain.png">
+                <p class="parag2">Some rain</p>
+                <div class="temp1">
+                    <p id="scal1" style="color: brown;">24</p>
+                    <p id="scal2" style="color: rgb(21, 71, 163);">18°</p>
+                </div>
+            </div>
+            <div class="today">
+                <p class="parag">Tomorrow</p>
+                <img src="some_sun.png">
+                <p class="parag2">Some rain</p>
+                <div class="temp1">
+                    <p id="scal3" style="color: brown;">27°</p>
+                    <p id="scal4"style="color: rgb(21, 71, 163);">19°</p>
+                </div>
+            </div>
+            <div class="today">
+                <p class="parag">Friday</p>
+                <img src="some_clouds.png">
+                <p class="parag2">Some clouds</p>
+                <div class="temp1">
+                    <p id="scal5"style="color: brown;">21°</p>
+                    <p id="scal6"style="color: rgb(21, 71, 163);">16°</p>
+                </div>
+            </div>
+            <div class="today">
+                <p class="parag">saturday</p>
+                <img src="some_sun.png">
+                <p class="parag2">Some sun</p>
+                <div class="temp1">
+                    <p id="scal7"style="color: brown;">26°</p>
+                    <p id="scal8"style="color: rgb(21, 71, 163);">21°</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <article>
+        <img src="cookie.png">
+        <div class="text">
+        <h3>stop! Cookie time</h3>
+        <p>We use cookies(sadly not the edible ones) to personlize content and ads, to provide social media
+            features and to analyse our traffic.<a href="#">Read more</a>
+        </p>
+        </div>
+        <button onclick="removeCookie()">I Accept</button>
+    </article>
+    <script src="weather.js"></script>
+</body>
+</html>
