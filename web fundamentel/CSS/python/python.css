@@ -4,8 +4,7 @@
 }
 
 header {
-    background-color: rgba(24, 83, 211, 0.685);
-}
+    background-color:#245076;}
 .text{
     display: flex;
     justify-content: flex-end;
@@ -22,7 +21,7 @@ header {
     color: yellow;
 }
 .img1{
-    width: 250px;
+    width: 350px;
     height: 100px;
     margin-left: 25px;
 }
@@ -30,24 +29,23 @@ header {
     display: flex;
 }
 .box{
-    background-color: rgb(44, 42, 42);
+    background-color: #444444;
     width: 300px;
     height: 70px;
-    margin-left: 380px;
+    margin-left: 280px;
     display: flex;
     justify-content: center;
-    border: 2px solid rgb(49, 48, 48);
+    border: 2px solid #444444;
     border-radius: 20px;
     align-items: center;
 }
 .search{
     height: 25px;
     border: 2px solid silver;
-    border-radius: 10px;
     text-align: center;
 }
 .go{
-    background-color: steelblue;
+    background-color: #245076;
     height: 30px;
     width: 40px;
     margin-left: 10px;
@@ -56,39 +54,40 @@ header {
 }
 nav ul{
     width: 900px;
-    height: 50px;
+    height: 40px;
     margin-left: 50px;
-    border: 2px solid rgba(24, 83, 211, 0.685);
+    border: 2px solid #477ead;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(11, 11, 179, 0.623);
+    background-color: #477ead;
     color: white;
     border-radius: 20px;
-    box-shadow: 2px 2px rgb(39, 38, 38);
+    box-shadow: 1px 1px rgb(39, 38, 38);
+    list-style-type: none;
 }
 nav ul li{
-    display: flex;
+    font-size: 25px;
 }
 nav{
-    background-color: rgba(24, 83, 211, 0.685);
+    background-color: #245076;
     width: 970px;
+    height: 50px;
 }
 article{
     width: 630px;
     height: 220px;
-    margin-top: 20px;
+    margin: 0 auto;
 }
 article ul {
-    margin-left: 250px;
+    margin: 0 auto;
+    width: fit-content;
     font-style: italic;
     color: yellow;
+    list-style-type: none;
 }
 article p{
     color: white;
-}
-article ul li{
-    display: flex;
 }
 .of{
     text-align: center;
@@ -99,20 +98,23 @@ article ul li{
     color: white;
 }
 aside{
-    margin-top: 20px;
+    width: 140px;
+    margin: 0 auto;
 }
-
+aside ul{
+    list-style: none;
+}
 aside ul li{
-    display: flex;
     color: white;
 }
 aside ul li a{
     color: white;
 }
 .cont1{
+    background-color: #245076;
     display: flex;
-    background-color: rgba(24, 83, 211, 0.685);
-    justify-content: space-evenly;
+    align-items: center;
+    height: 250px;
 }
 section{
     margin-top: 20px;
@@ -128,6 +130,13 @@ section .getting{
     height: 100px;
 }
 section ul{
+    
+    list-style:square
+}
+section ul li{
+    color: black
+}
+section ul li span{
     color: rgba(36, 135, 216, 0.726);
 }
 section h2,h3{
@@ -145,7 +154,7 @@ section .application p a{
     text-decoration: none;
 }
 footer{
-    background-color:rgba(24, 83, 211, 0.685);
+    background: linear-gradient(#255278,#3274ab);
     margin-top: 20px;
     height: 80px;
 }

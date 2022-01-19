@@ -8,8 +8,8 @@ function press(a){
     if(operator == ""){
         var number=document.querySelector("#num"+a)
         var parsedInt=parseInt(number.innerText)
-        element.innerText=parsedInt
-        arr.push(parsedInt)
+        element.innerText=a
+        arr.push(a)
         firstValue = arr.join('');
         element.innerText=firstValue
     }
