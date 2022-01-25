@@ -1,0 +1,42 @@
+insert into users (first_name,last_name)
+values ('Ahamd','maher'),('imad','mohammad'),('sajed','khaled') ,
+('saad','osid'),('kamal','amin');
+
+insert into friendship (user_id,friend_id)
+values (1,2),(1,4),(1,6),
+(2,1),(2,3),(2,5),
+(3,2),(3,5),
+(4,3),(5,1),(5,6),(6,2),(6,3);
+
+
+
+select users.first_name,users.last_name ,friends.first_name,friends.last_name
+from users
+join friendship on users.id=friendship.user_id
+join users as friends on friends.id=friendship.friend_id
+
+
+
+select users.first_name,users.last_name ,friends.first_name,friends.last_name
+from users
+join friendship on users.id=friendship.user_id
+join users as friends on friends.id=friendship.friend_id
+where users.id=1
+
+
+
+select count(friendship.id) as 'number of friendships'from friendship
+
+
+select users.first_name,users.last_name,users.id, count(friendship.user_id) as 'number of friendships'from friendship
+join users on users.id=friendship.user_id
+group by (users.first_name)
+order by  count(friendship.user_id) desc 
+limit 1
+
+select users.first_name,users.last_name, friends.first_name,friends.last_name
+from users
+join friendship on users.id=friendship.user_id
+join users as friends on friends.id=friendship.friend_id
+where users.id=3
+order by friends.first_name asc
