@@ -1,27 +1,36 @@
 insert into dojos_and_ninjas_shemas.dojo 
 (name)
 values ('maher'),('omar'),('ahmad')
+
 delete from dojos_and_ninjas_shemas.dojo
 limit 3
+
 insert into dojos_and_ninjas_shemas.dojo
 (name)
 values('maher'),('omar'),('ahmad')
+
 insert into ninja(first_name,last_name,age,dojo_id)
 values ('abed','bakr',18,4),('yasser','hamza',30,4),('saad','mahmoud',24,4),
 ('obida','osid',22,5),('ayman','sami',35,5),('moath','ammer',40,5),
-('amin','ziad',50,6),('iyad','nasser',37,6),('jamal','imad',33,6);
+('amin','ziad',50,6),('iyad','nasser',37,6),('jamal','imad',33,6);  
+
 select ninja.first_name,ninja.last_name,ninja.age,dojo.name
 from ninja
 join dojo on dojo.id=ninja.dojo_id
 where dojo_id =4
+
+
 select ninja.first_name,ninja.last_name,ninja.age,dojo.name
 from ninja
 join dojo on dojo.id=ninja.dojo_id
 where dojo_id =6
+
+
 select ninja.first_name,ninja.last_name,ninja.age,dojo.name as "dojos names"
 from ninja
 join dojo on dojo.id=ninja.dojo_id
 where dojo.id =(select max(dojo.id) from dojo)
+
 select ninja.first_name,ninja.last_name,ninja.age,dojo.name as "dojos names"
 from ninja
 join dojo on dojo.id=ninja.dojo_id

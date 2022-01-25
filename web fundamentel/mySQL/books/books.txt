@@ -1,0 +1,43 @@
+insert into authors (name)
+values ('Jane Austen'), ('Emily Dickinson'), 
+('Fyodor Dostoevsky'),('William Shakespeare'), ('Lau Tzu');  
+
+insert into books (title,num_of_pages)
+values ('C',500), ('Sharp',600), ('Java',700), ('Python',800), ('PHP',900), ('Ruby',100);  
+
+update books  set title= 'c#' where id =1
+
+update authors 
+set name='bill shakespeare' where id =4
+
+
+insert into favorites (author_id,books_id)
+values (1,1),(1,2),(2,1),(2,2),(2,3),(3,1),(3,2),(3,3),(3,4),(4,1),(4,2),(4,3),(4,4),(4,5);
+
+
+select books.title,authors.name 
+from books 
+join favorites on books.id=favorites.book_id
+join authors on authors.id=favorites.author_id
+where books.id=3
+
+
+delete from favorites where author_id=2 and book_id=3
+
+insert into favorites (author_id,book_id)
+value (5,2)
+
+
+select authors.name, books.title 
+from books
+join favorites on books.id=favorites.book_id 
+join authors on authors.id=favorites.author_id
+where authors.id=3
+
+select authors.name, books.title 
+from books
+join favorites on books.id=favorites.book_id 
+join authors on authors.id=favorites.author_id
+where books.id=5
+
+
