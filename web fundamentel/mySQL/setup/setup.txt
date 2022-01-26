@@ -1,0 +1,8 @@
+insert into users(first_name,last_name)
+values('Maher','khalid');
+
+updtae users set first_name = "Abdulhadi" 
+where id = 1;
+
+delete from users 
+where id=1;
