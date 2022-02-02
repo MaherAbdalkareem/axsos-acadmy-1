@@ -18,6 +18,10 @@ def sy(name):
 def repate(num,name):
     return f'Hello {name}'*int(num)  
 
+@app.errorhandler(404)
+def sorry(x):
+    return 'sorry! No response. Try again.'
+
 
 if __name__=="__main__":       
     app.run(debug=True)    
