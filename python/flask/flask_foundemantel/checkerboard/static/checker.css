@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+.box1{
+    width: 30px;
+    height: 30px;
+    background-color: black;
+}
+
+.box2{
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}
+.box3{
+    width: 30px;
+    height: 30px;
+    background-color:green;
+
+}
+
+.box4{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+}
+table{
+    margin-left: 10px;
+    border: solid black 2px;
+}

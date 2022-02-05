@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkerboard</title>
+</head>
+<style>
+    .box1{
+        width: 30px;
+        height: 30px;
+        background-color: {{color1}};
+    }
+    .box2{
+        width: 30px;
+        height: 30px;
+        background-color: {{color2}};
+    }
+</style>
+<body>
+    <table>
+        {% for i in range(0,x) %}
+        <tr>
+    {%for i in range(0,z)%}
+    <td class="box1"></td>
+    <td class="box2"></td>
+    {% endfor %}
+    </tr>
+    <tr>
+        {%for i in range(0,z)%}
+        <td class="box2"></td>
+        <td class="box1"></td>
+        {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>
