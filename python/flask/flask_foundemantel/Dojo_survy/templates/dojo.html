@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survuy Index</title>
+</head>
+<body>
+    <form action="/result" method="post">    
+    <p>Your Name :<input type="text" name="username"></p>
+    <p>Dojo location : <select name="location" >
+        <option value="nablus">Nablus</option>
+        <option value="Tulkarem">Tulkarem</option>
+        <option value="Ramallah">Ramallah</option>
+    </select> 
+    </p>
+    <p>Favorite Language : <select name="fav" >
+        <option value="python">python</option>
+        <option value="java">java</option>
+        <option value="MERN">MERN</option>
+    </select> 
+    </p>
+    <p>what is your gender :</p>
+    <input type="radio" name="option" value="Male">Male
+    <input type="radio" name="option" value="Female">Female
+    <input type="radio" name="option" value="None">None
+    <p>how do you hear about us</p>
+    <input type="checkbox" name="choose" value="Facebook">Facebook
+    <input type="checkbox" name="choose" value="Twitter">Twitter
+    <input type="checkbox" name="choose" value="Email">Email
+
+    <p>comment (optional): </p>
+        <p> <textarea name="comment"  cols="30" rows="10"></textarea></p>
+    
+    <button type="submit">submit</button>
+    </form>
+
+
+</body>
+</html>

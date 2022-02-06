@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+</head>
+<body>
+    <h1>counter</h1>
+    <p>{{number_of_visit}} Times</p>
+    <form action="/increment" method="post">
+    <p><button type="submit" name="adding">+2 adding</button></p>
+    </form>
+    <form action="/decrement" method="post">
+    <p><button type="submit" name="rest">rest</button></p>
+    </form>
+    <form action="increase" method="post">
+        <P> enter your number : <input type="text" name="num">  </P>
+    </form>
+</body>
+</html>
