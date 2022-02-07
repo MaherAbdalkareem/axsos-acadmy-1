@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo survey index</title>
+</head>
+<body>
+    <p>{{name}}</p>
+    <p>{{location}}</p>
+    <p>{{language}}</p>
+    <p>{{gender}}</p>
+    <p>{{choose}}</p>
+    <p>{{comment}}</p>
+    <form action="/" method="post">
+        {% csrf_token %} 
+    <button class="btn" type="submit">Go back</button>
+    </form>
+</body>
+</html>
