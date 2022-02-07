@@ -38,6 +38,7 @@ class user:
     def display_user_balance(self,index):
         print(self.account[index].balance)
         return self
+    
 
 
 acc1=bankAccount(0.02,0) #index 0
