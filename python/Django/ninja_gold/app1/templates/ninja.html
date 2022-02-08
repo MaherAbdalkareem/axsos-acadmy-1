@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gold</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ninja.css'%}">
+</head>
+<body>
+    <div class="result"><p id="parg"> Your Gold : </p><p id="gold">{{request.session.result}}</p></div>
+    <div class="cont">
+    <div class="box">
+        <p>Farm</p>
+        <p>(earns 10-20 golds)</p>
+        <form action="/process_money" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="which_form" value="farm">
+        <button type="submit">Find Gold</button>
+        </form>
+    </div>
+    <div class="box">
+        <p>cave</p>
+        <p>(earns 5-10 golds)</p>
+        <form action="/process_money" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="which_form" value="cave">
+            <button type="submit">Find Gold</button>
+        </form>
+    </div>
+    <div class="box">
+        <p>House</p>
+        <p>(earns 2-5 golds)</p>
+        <form action="/process_money" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="which_form" value="house">
+            <button type="submit">Find Gold</button>
+        </form>
+    </div>
+    <div class="box">
+        <p>Casino</p>
+        <p>(earns/takes 0-50 golds)</p>
+        <form action="/process_money" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="which_form" value="casino">
+            <button type="submit">Find Gold</button>
+        </form>
+    </div>
+    </div>
+    <div>
+    <p>Activities:</p> 
+    <section>
+        {% for i in request.session.cont %}
+            <p>{{ i }}</p>
+        {% endfor %}
+    </section>
+        
+</div>
+</body>
+</html>
