@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+</head>
+<body>
+    <h1>counter</h1>
+    <p>{{request.session.count}} times</p>
+    <form action="destroy_session" method="post">
+        {% csrf_token%}
+        <button type="submit"> reset </button>
+    </form>
+    <form action="add" method="post">
+        {% csrf_token%}
+        <button type="submit"> +2 add </button>
+    </form>
+    <form action="specify" method="post">
+        {% csrf_token%}
+        <p> Enter your increment value : <input type="text" name="increment"></p>
+        <button type="submit"> increment </button>
+    </form>
+</body>
+</html>
