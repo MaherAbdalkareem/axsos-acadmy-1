@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C+R User</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'user.css'%}">
+</head>
+
+<body>
+    <div class="cont">
+        <h1>All the users</h1>
+        <table>
+            <tr>
+                <td>Id</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Email Address</td>
+                <td>Age</td>
+                <td>Created at</td>
+                <td>Updated at</td>
+            </tr>
+            {% for i in all_the_users %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.first_name}}</td>
+                <td>{{i.last_name}}</td>
+                <td>{{i.email_addres}}</td>
+                <td>{{i.age}}</td>
+                <td>{{i.created_at}}</td>
+                <td>{{i.updated_at}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <hr>
+    <div class="add">
+        <h2>Add a user</h2>
+        <form action="/process" method="post">
+            {% csrf_token %}
+            <div class="name">
+                <p>First Name : <input type="text" name="name1"></p>
+                <p>Last Name : <input type="text " name="last"></p>
+            </div>
+            <div class="info">
+                <p>Email : <input type="text" name="email"></p>
+                <p>Age : <input type="text" name="age"></p>
+            </div>
+            <button type="submit">Add</button>
+        </form>
+        <form action="/delete" method="post">
+            {% csrf_token %}
+            <button type="submit"> reset </button>
+        </form>
+    </div>
+</body>
+
+</html>
