@@ -1,0 +1,28 @@
+ Dojo.objects.create(name="maher", city="nablus",state="west bank")
+Dojo.objects.create(name="sanad", city="Amman",state="Jordan")
+ Dojo.objects.create(name="Ahmad", city="Miame",state="USA")
+
+Dojo.objects.all().delete
+
+Ninja.objects.create(first_name="mohmmad",last_name="abed",dojo=Dojo.objects.get(id=4))
+Ninja.objects.create(first_name="Saad",last_name="Amin",dojo=Dojo.objects.get(id=4))
+Ninja.objects.create(first_name="Musaab",last_name="Yazan",dojo=Dojo.objects.get(id=4))
+
+Ninja.objects.create(first_name="mohmmad",last_name="abed",dojo=Dojo.objects.get(id=5))
+Ninja.objects.create(first_name="Saad",last_name="Amin",dojo=Dojo.objects.get(id=5))
+Ninja.objects.create(first_name="Musaab",last_name="Yazan",dojo=Dojo.objects.get(id=5))
+
+
+Ninja.objects.create(first_name="mohmmad",last_name="abed",dojo=Dojo.objects.get(id=6))
+Ninja.objects.create(first_name="Saad",last_name="Amin",dojo=Dojo.objects.get(id=6))
+Ninja.objects.create(first_name="Musaab",last_name="Yazan",dojo=Dojo.objects.get(id=6))
+
+Dojo.objects.first().ninjas.all
+
+Dojo.objects.last().ninjas.all
+
+
+
+Ninja.objects.last().dojo
+
+ Dojo.objects.create(name="osaid",city="Dubai",state="UAE",desc="I'm a full stack developer")

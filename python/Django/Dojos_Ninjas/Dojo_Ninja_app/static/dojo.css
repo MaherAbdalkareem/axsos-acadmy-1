@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.cont{
+    display: flex;
+    width: 700px;
+    height: 200px;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+p{
+    margin: 20px;
+}
+select{
+    margin: 10px;
+}
+.display{
+    text-align: center;
+    margin: 20px;
+}
+
+ul{
+    list-style: none;
+    margin: 10px;
+}
