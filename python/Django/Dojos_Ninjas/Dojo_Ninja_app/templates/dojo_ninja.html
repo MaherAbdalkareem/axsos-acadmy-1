@@ -42,10 +42,12 @@
     <div class="display">
         <h3>All the Dojos</h3>
         <ul>
-            {% for x in Dojos%}
-            <li>Ninjas at {{x.name}} 
+            {% for i in Dojos%}
+            <li name="z" >Ninjas at {{i.name}} <form action="/delete" method="post" >{% csrf_token %}  
+                <input type="hidden" name="del_dojo" value="{{i.id}}">
+                <button type="submit"> Delete</button></form>
                 <ul>
-                    {% for Ninja in x.ninjas.all %}  <!-- this x related to the first loop -->
+                    {% for Ninja in i.ninjas.all %}  <!-- this x related to the first loop -->
                     <li><em>{{Ninja.first_name}} {{Ninja.last_name}}</em></li>
                     {% endfor %}
                 </ul>

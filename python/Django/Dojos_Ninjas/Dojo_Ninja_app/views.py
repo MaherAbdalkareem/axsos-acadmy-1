@@ -1,3 +1,4 @@
+from traceback import print_tb
 from unicodedata import name
 from django.shortcuts import redirect, render
 from .models import Dojo,Ninja
@@ -16,5 +17,10 @@ def show(request):
         "Dojos":Dojo.objects.all()
     }
     return render(request,'dojo_ninja.html',context)
+
+def remove(request):
+    e = Dojo.objects.get(id=request.POST['del_dojo'])
+    e.delete()
+    return redirect('/')
 
 
