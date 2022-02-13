@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 700px;
+    height: 200px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+}
+table,tr,td{
+    border: 2px solid black;
+    text-align: center;
+}
+
+p{
+    margin-top: 20px;
+}
+button{
+    margin: 10px;
+}
