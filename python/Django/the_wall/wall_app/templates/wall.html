@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wall</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'wall.css'%}">
+</head>
+
+<body>
+    <div class="top">
+        <h1>Coding Dojo Wall</h1>
+        <div class="front">
+            <p>Welcome {{this_user.first_name}}</p>
+            <p><a href="http://127.0.0.1:8000/">Log Out</a></p>
+        </div>
+    </div>
+    <hr>
+    <section>
+        <form action="/add_post" method="post">
+            {% csrf_token %}
+            <p class="post">Post a message</p>
+            <textarea name="post" cols="100" rows="5"></textarea>
+            <span class="add_post">
+                <button type="submit">Post a message</button>
+            </span>
+        </form>
+        {% for post in post %}
+        {% if this_user.id == post.user_id %}
+        <form action="/delete" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="delete" value={{post.id}}>
+            <button type="submit">Delete</button>
+        </form>
+        {% endif %}
+        <div class="content"></div>
+        <p>{{post.user.first_name}} {{post.user.last_name}} {{post.user.created_at}}</p>
+        <p>{{post.message}}</p>
+        <form action="/add_comment" method="post" class="comment">
+            {% csrf_token %}
+            {% for comment in post.comments.all %}
+            <p>{{comment.user.first_name}} {{comment.user.last_name}} {{comment.user.created_at}}</p>
+            <p>{{comment.comment}}</p>
+            {% endfor %}
+            <p class="add_comment">Post a Comment</p>
+            <textarea name="comment" cols="100" rows="5"></textarea>
+            <input type="hidden" name="post_id" value={{post.id}}>
+            <span class="add_post">
+                <button type="submit">Post a comment</button>
+            </span>
+        </form>
+        </div>
+        {% endfor %}
+
+    </section>
+</body>
+
+</html>

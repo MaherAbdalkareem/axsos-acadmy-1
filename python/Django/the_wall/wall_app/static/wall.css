@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.top{
+    width: inherit;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    align-items: center;
+}
+.front{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+section{
+    width: 800px;
+    margin: 20px auto;
+}
+.post{
+    font-size: 30px;
+}
+
+.add_post{
+    width: 800px;
+    height: 30px;
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+}
+button{
+    background-color: rgb(10, 100, 184);
+    color: white;
+}
+
+.content{
+    margin-bottom: 50px;
+}
+.comment{
+    margin-top: 40px;
+}
+
+.add_comment{
+    margin-top: 30px;
+}
