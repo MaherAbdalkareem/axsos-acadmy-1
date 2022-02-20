@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Books</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'book.css'%}">
+</head>
+
+<body>
+    <nav>
+        <h1>Welcome, {{this_user.first_name}}!</h1>
+        <p><a href="http://127.0.0.1:8000/">Log out</a></p>
+    </nav>
+    <hr>
+    <section>
+        <div class="add_book">
+            <form action="/add_book" method="post">
+                {% csrf_token %}
+                {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+                <p>Add a Favorite Book</p>
+                <p>Title :
+                    <input type="text" name="title">
+                </p>
+                <p>Description :
+                    <textarea name="desc"></textarea>
+                </p>
+                <div class="add">
+                <button type="submit">Add</button>
+            </div>
+            </form>
+        </div>
+        <div class="books">
+            <p>All Books </p>
+            {% for book in books %}
+            <p class="all_books"><a href="/books/{{book.id}}">{{book.title}}</a></p>
+            <p>add by {{book.uploaded_by.first_name}} {{book.uploaded_by.last_name}}</p>
+            {% if this_user in book.liked_books.all %}
+            <p>this is one of your favorite</p>
+            {% else %}
+            <p class="fav"><a href="/add_fav/{{book.id}}">Add to favorite</a></p>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+</body>
+
+</html>

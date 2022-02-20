@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    height: 50px;
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section{
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+}
+
+section p{
+    margin-bottom: 30px;
+}
+
+section h2{
+    margin-bottom: 30px;
+}

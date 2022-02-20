@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Books</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'favbook.css'%}">
+</head>
+
+<body>
+    <nav>
+        <h1>Welcome, {{this_user.first_name}}!</h1>
+        <p><a href="http://127.0.0.1:8000/">Log out</a></p>
+    </nav>
+    <hr>
+    <section>
+        <div>
+            <p>{{this_book.title}}</p>
+            <p>Add by :{{this_book.uploaded_by.first_name}} {{this_book.uploaded_by.last_name}}</p>
+            <p>Add on : {{this_book.created_at}} </p>
+            <p>Last Updated : {{this_book.updated_at}} </p>
+            <p>Descriptions : {{this_book.desc}}</p>
+        </div>
+        <div>
+            <h2>User Who Like This Book</h2>
+            <ul>
+            {% for user in this_book.liked_books.all %}
+            <li>{{user.first_name}} {{user.last_name}}
+                {% if user.id == this_user.id %}
+            <a href="/delete/fav/{{this_book.id}}">Un-favorite</a>
+            {% endif %}
+        </li>
+            {% if this_user not in this_book.liked_books.all %}
+            <p><a href="/add_fav/{{this_book.id}}">Add to favorite</a></p>
+            {% endif %}
+            {% endfor %}
+        </ul>
+        </div>
+    </section>
+</body>
+
+</html>

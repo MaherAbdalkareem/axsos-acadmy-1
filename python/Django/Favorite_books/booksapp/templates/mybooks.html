@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Book</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'mybook.css'%}">
+</head>
+<body>
+    <nav>
+        <h1>Welcome, {{this_user.first_name}}!</h1>
+        <p><a href="http://127.0.0.1:8000/">Log out</a></p>
+    </nav>
+    <hr>
+    <section>
+    <div class="mybook">
+    <form action="/update/{{this_book.id}}" method="post">
+        {% csrf_token %}
+    <p> <input type="text" name="title" value={{this_book.title}}></p>
+    <p>Add by : {{this_book.uploaded_by.first_name}} {{this_book.uploaded_by.last_name}}</p>
+    <p>Add on : {{this_book.created_at}}</p>
+    <p>last updated on : {{this_book.updated_at}}</p>
+        <p>Description :
+            <textarea name="desc" >{{this_book.desc}}</textarea>
+        </p>
+        <button type="submit">update</button>
+    
+    <form action="/delete/{{this_book.id}}" method="post">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+    </form>
+</form>
+</div>
+<div>
+    <p>User Who Like This Book</p>
+    <ul>
+    {% for user in this_book.liked_books.all %}
+    {% if user.id == this_user.id %}
+    <li>{{ user.first_name }} {{ user.last_name }}  <a href="/delete/fav/{{this_book.id}}">Un-favorite</a></li>
+    {% else %}
+    <li>{{ user.first_name }} {{ user.last_name }} </li>
+    {% endif %}
+    {% endfor %}
+</ul>
+</div>
+</section>
+</body>
+</html>
