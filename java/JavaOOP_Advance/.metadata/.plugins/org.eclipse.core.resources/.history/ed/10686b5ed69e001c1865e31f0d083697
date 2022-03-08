@@ -1,0 +1,16 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Gorila gorila1= new Gorila();
+		
+		gorila1.throwSomething();
+		gorila1.throwSomething();
+		gorila1.throwSomething();
+		gorila1.eatBananas() ;
+		gorila1.eatBananas() ;
+		gorila1.eatBananas() ;
+	}
+
+}
