@@ -10,7 +10,7 @@ class Ninja{
         
     }
     showStats(){
-        console.log(`${ this.name } ${this.health} ${this.speed} ${this.strength}`)
+        console.log(`Name : ${ this.name } ,Health: ${this.health} ,Speed:  ${this.speed} ,Strength: ${this.strength}`)
     }
     drinkSake(){
         this.health +=10;
