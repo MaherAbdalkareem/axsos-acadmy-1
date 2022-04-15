@@ -101,7 +101,7 @@ const Person = (props) => {
             </div>
             <div>
             <h1>Your Data </h1>
-                <p>first Name : {firstname}</p>
+                <p>first Name :{firstname}</p>
                 <p>last Name : {lastname}</p>
                 <p>Email : {email}</p>
                 <p>Password : {password}</p>
