@@ -9,6 +9,7 @@ import {
   Switch
 } from "react-router-dom";
 import Details from './view/Details';
+import Update from './view/Update';
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,7 @@ function App() {
       <Routes>
           <Route exact path='/product/new' element = {< Main />} />
           <Route exact path='/product/:id' element = {<Details />}/>
+          <Route exact path='/product/:id/edit' element = {<Update />}/>
       </Routes>
       </BrowserRouter>
     </div>
