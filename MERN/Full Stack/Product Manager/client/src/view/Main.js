@@ -11,19 +11,18 @@ export default (props) => {
             .then(res=>{
                 setProducts(res.data);
                 setLoaded(true);
+                
             })
             .catch(err => console.error(err));
     },[]);
 
-    const removeFromDom = productId => {
-        setProducts(products.filter(product => product._id != productId));
-    }
+    
     return(
         <div>
             <Product />
             <hr/>
             <h1> All Products </h1>
-             {loaded && <ProductList removeFromDom={removeFromDom}/>}
+             {loaded && <ProductList />}
         </div>
     )
 }
