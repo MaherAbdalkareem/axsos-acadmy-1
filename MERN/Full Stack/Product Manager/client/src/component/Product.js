@@ -1,9 +1,10 @@
 import React ,{useState}from 'react'
 import axios from 'axios'
-const Product = () => {
+const Product = (props) => {
     const[title,setTitle] = useState("")
     const[price,setPrice] = useState(0)
     const[description,setDescription] = useState("")
+    const {product, onUpadteHandler}=props
     const handelSubmit = e =>{
         e.preventDefault();
         axios.post('http://localhost:8000/api/product/new',{
@@ -11,7 +12,11 @@ const Product = () => {
             price,
             description
         })
-        .then(res=>console.log(res))
+        .then(res=>{
+            console.log(res)
+            console.log(product)
+            onUpadteHandler([...product, res.data]);
+        })
         .catch(err=>console.log(err))
     }
   return (

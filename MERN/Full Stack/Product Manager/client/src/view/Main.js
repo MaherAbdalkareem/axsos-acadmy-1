@@ -15,14 +15,12 @@ export default (props) => {
             })
             .catch(err => console.error(err));
     },[]);
-
-    
     return(
         <div>
-            <Product />
+            <Product product={products} onUpadteHandler={setProducts}/>
             <hr/>
             <h1> All Products </h1>
-             {loaded && <ProductList />}
+             {loaded && <ProductList products={products} setProducts={setProducts}/>}
         </div>
     )
 }
